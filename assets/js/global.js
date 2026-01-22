@@ -19,20 +19,75 @@ const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
 
 if (cursorDot && cursorOutline) {
+  let mouseX = 0;
+  let mouseY = 0;
+  let outlineX = 0;
+  let outlineY = 0;
+  let isMoving = false;
+  let inactivityTimer;
+
+  function animateCursor() {
+    outlineX += (mouseX - outlineX) * 0.3;
+    outlineY += (mouseY - outlineY) * 0.3;
+
+    cursorOutline.style.left = `${outlineX}px`;
+    cursorOutline.style.top = `${outlineY}px`;
+
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  function resetInactivityTimer() {
+    clearTimeout(inactivityTimer);
+    showCursor();
+
+    inactivityTimer = setTimeout(() => {
+      hideCursor();
+    }, 3000);
+  }
+
+  function showCursor() {
+    if (cursorDot && cursorOutline) {
+      cursorDot.style.opacity = "1";
+      cursorOutline.style.opacity = "1";
+    }
+  }
+
+  function hideCursor() {
+    if (cursorDot && cursorOutline) {
+      cursorDot.style.opacity = "0";
+      cursorOutline.style.opacity = "0";
+    }
+  }
+
   window.addEventListener("mousemove", (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
+    cursorDot.style.left = `${mouseX}px`;
+    cursorDot.style.top = `${mouseY}px`;
 
-    cursorOutline.animate(
-      {
-        left: `${posX}px`,
-        top: `${posY}px`,
-      },
-      { duration: 500, fill: "forwards" },
-    );
+    if (
+      mouseX >= 0 &&
+      mouseX <= window.innerWidth &&
+      mouseY >= 0 &&
+      mouseY <= window.innerHeight
+    ) {
+      showCursor();
+      resetInactivityTimer();
+    } else {
+      hideCursor();
+    }
+  });
+
+  document.addEventListener("mouseleave", () => {
+    hideCursor();
+    clearTimeout(inactivityTimer);
+  });
+
+  document.addEventListener("mouseenter", () => {
+    showCursor();
+    resetInactivityTimer();
   });
 
   document.addEventListener("mouseover", (e) => {
@@ -45,6 +100,15 @@ if (cursorDot && cursorOutline) {
       cursorOutline.classList.remove("hovered");
     }
   });
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .cursor-dot, .cursor-outline {
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+  `;
+  document.head.appendChild(style);
 }
 
 function handleScrollAnimation() {
