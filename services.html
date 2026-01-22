@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Harsh Ovhal</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/services.css" />
+  </head>
+  <body
+    class="antialiased min-h-screen relative selection:bg-black selection:text-yellow-400"
+  >
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <nav
+      class="fixed top-0 left-0 w-full z-50 px-6 py-4 glass-card md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a
+          href="index.html"
+          class="text-2xl font-bold tracking-tighter hoverable"
+          aria-label="Home"
+        >
+          HO<span class="text-yellow-600">.</span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="nav-link hoverable text-sm uppercase tracking-widest hover:text-gray-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link  hoverable text-sm uppercase tracking-widest hover:text-gray-600 transition-colors"
+            >About</a
+          >
+          <a
+            href="projects.html"
+            class="nav-link hoverable text-sm uppercase tracking-widest hover:text-gray-600 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="services.html"
+            class="nav-link hoverable active text-sm uppercase tracking-widest hover:text-gray-600 transition-colors"
+            >Services</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link hoverable text-sm uppercase tracking-widest hover:text-gray-600 transition-colors"
+            >Contact</a
+          >
+
+          <div class="reveal">
+            <a
+              href="assets/resume/Harsh's_Resume.pdf"
+              download
+              class="flex items-center gap-2 bg-yellow-400 text-white font-semibold px-5 py-2 rounded-full shadow-lg hover:bg-yellow-300 hover:scale-105 transition-transform transition-colors duration-300"
+            >
+              <i class="fa-solid fa-download"></i>
+              Resume / CV
+            </a>
+          </div>
+        </div>
+        <button
+          class="md:hidden hoverable focus:outline-none"
+          id="mobile-menu-btn"
+          aria-label="Toggle menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-white/95 z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 md:hidden"
+      >
+        <button class="absolute top-6 right-6 hoverable" id="close-menu-btn">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <a
+          href="index.html"
+          class="text-2xl font-bold hoverable"
+          onclick="toggleMobileMenu()"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-2xl font-bold hoverable"
+          onclick="toggleMobileMenu()"
+          >About</a
+        >
+        <a
+          href="projects.html"
+          class="text-2xl font-bold hoverable"
+          onclick="toggleMobileMenu()"
+          >Projects</a
+        >
+        <a
+          href="services.html"
+          class="text-2xl font-bold hoverable"
+          onclick="toggleMobileMenu()"
+          >Services</a
+        >
+        <a
+          href="contact.html"
+          class="text-2xl font-bold hoverable"
+          onclick="toggleMobileMenu()"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <main class="pt-24 min-h-screen">
+      <section id="services" class="max-w-7xl mx-auto px-6 py-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 reveal">What I Do</h1>
+        <p class="text-xl text-gray-600 mb-16 max-w-2xl reveal"
+          >I help businesses grow by crafting high-quality software solutions
+          tailored to their needs.</p
+        >
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="glass-card p-8 rounded-3xl hoverable group reveal hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+            <p class="text-gray-600 mb-6"
+              >Building responsive, interactive, and accessible user interfaces
+              using React, Next.js, and modern CSS frameworks.</p
+            >
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• Single Page Applications</li>
+              <li>• Progressive Web Apps</li>
+              <li>• UI/UX Implementation</li>
+            </ul>
+          </div>
+
+          <div
+            class="glass-card p-8 rounded-3xl hoverable group reveal hover:-translate-y-2 transition-all duration-300"
+            style="transition-delay: 100ms"
+          >
+            <div
+              class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+            <p class="text-gray-600 mb-6"
+              >Creating robust server-side logic, databases, and APIs to power
+              your applications securely and efficiently.</p
+            >
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• RESTful API Design</li>
+              <li>• Database Management (SQL/NoSQL)</li>
+              <li>• Authentication & Security</li>
+            </ul>
+          </div>
+
+          <div
+            class="glass-card p-8 rounded-3xl hoverable group reveal hover:-translate-y-2 transition-all duration-300"
+            style="transition-delay: 200ms"
+          >
+            <div
+              class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Full Stack Solutions</h3>
+            <p class="text-gray-600 mb-6"
+              >End-to-end development from concept to deployment, ensuring
+              seamless integration between front and back ends.</p
+            >
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• MVP Development</li>
+              <li>• E-commerce Solutions</li>
+              <li>• SaaS Platforms</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-20 reveal">
+          <h2 class="text-3xl font-bold mb-10 text-center">My Workflow</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="relative">
+              <div class="glass-card p-6 rounded-3xl h-full">
+                <span
+                  class="text-5xl font-bold text-black/10 absolute top-4 right-4"
+                  >01</span
+                >
+                <h4 class="text-xl font-bold mb-2 mt-4">Discovery</h4>
+                <p class="text-sm text-gray-600">
+                  Understanding your goals, target audience, and requirements.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="glass-card p-6 rounded-3xl h-full">
+                <span
+                  class="text-5xl font-bold text-black/10 absolute top-4 right-4"
+                  >02</span
+                >
+                <h4 class="text-xl font-bold mb-2 mt-4">Design</h4>
+                <p class="text-sm text-gray-600">
+                  Creating wireframes and high-fidelity mockups for approval.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="glass-card p-6 rounded-3xl h-full">
+                <span
+                  class="text-5xl font-bold text-black/10 absolute top-4 right-4"
+                  >03</span
+                >
+                <h4 class="text-xl font-bold mb-2 mt-4">Build</h4>
+                <p class="text-sm text-gray-600">
+                  Writing clean, efficient code and integrating systems.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="glass-card p-6 rounded-3xl h-full">
+                <span
+                  class="text-5xl font-bold text-black/10 absolute top-4 right-4"
+                  >04</span
+                >
+                <h4 class="text-xl font-bold mb-2 mt-4">Launch</h4>
+                <p class="text-sm text-gray-600">
+                  Deploying the project and providing post-launch support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20 reveal">
+          <h2 class="text-3xl font-bold mb-10 text-center"
+            >Engagement Models</h2
+          >
+          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div
+              class="glass-card p-8 rounded-3xl h-fit border-l-8 border-black"
+            >
+              <h3 class="text-2xl font-bold mb-2">Freelance</h3>
+              <p class="text-gray-600 mb-4"
+                >Perfect for small tasks, bug fixes, or consultation.</p
+              >
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-2"
+                  ><svg
+                    class="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Flexible hours</li
+                >
+                <li class="flex items-center gap-2"
+                  ><svg
+                    class="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Direct communication</li
+                >
+              </ul>
+              <a
+                href="contact.html"
+                class="hoverable block text-center w-full py-3 bg-transparent border-2 border-black font-bold rounded-lg hover:bg-black hover:text-white transition-colors"
+                >Contact Now</a
+              >
+            </div>
+            <div
+              class="glass-card p-8 rounded-3xl border-l-8 border-yellow-500 transform md:-translate-y-4"
+            >
+              <div
+                class="text-xs font-bold uppercase tracking-widest text-yellow-600 mb-2"
+                >Most Popular</div
+              >
+              <h3 class="text-2xl font-bold mb-2">Project Based</h3>
+              <p class="text-gray-600 mb-4"
+                >Work completed efficiently within the defined scope. Ideal for
+                MVPs, full websites, and projects delivered on time with clear
+                milestones.</p
+              >
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-2"
+                  ><svg
+                    class="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Clear roadmap</li
+                >
+                <li class="flex items-center gap-2"
+                  ><svg
+                    class="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Dedicated support</li
+                >
+                <li class="flex items-center gap-2"
+                  ><svg
+                    class="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Milestone payments</li
+                >
+              </ul>
+              <a
+                href="contact.html"
+                class="hoverable block text-center w-full py-3 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition-colors"
+                >Get a Quote</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="glass-card mt-20 border-t border-gray-200">
+      <div
+        class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-4 md:mb-0">
+          <span class="font-bold text-xl">HO.</span>
+          <span class="text-sm text-gray-500 ml-2">© 2026 Harsh Ovhal</span>
+        </div>
+        <div class="flex gap-6 text-sm text-gray-600">
+          <a
+            href="https://leetcode.com/u/Harshhhhhh_1/"
+            class="hover:text-black hoverable"
+            >LeetCode</a
+          >
+          <a
+            href="https://www.linkedin.com/in/harshoval/"
+            class="hover:text-black hoverable"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/H2rsh16"
+            class="hover:text-black hoverable"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/services.js"></script>
+  </body>
+</html>
